@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header{
+    width: 100%;
+    background-color: #003;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.header .logo{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header svg{
+    fill: white;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+}
+
+.show-overlay{
+    display: flex;
+}
+
+.side-bar{
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 45rem;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: -5px -5px 20px black;
+}
+
+.show-side-bar{
+    animation: showSideBar 1s ease-in-out 1 forwards;
+    -webkit-animation: showSideBar 1s ease-in-out 1 forwards;
+}
+
+.hide-side-bar{
+    animation: hideSideBar 1s ease-in-out 1 forwards  ;
+    -webkit-animation: hideSideBar 1s ease-in-out 1 forwards  ;
+}
+
+@keyframes showSideBar {
+    0%{
+    right: -300px;
+}
+100%{
+    right: 0;
+}
+}
+
+@keyframes hideSideBar {
+    0%{
+    right: 0;
+}
+100%{
+    right: -300px;
+}
+}
+
+.side-bar div{
+    height: 36rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+}
+
